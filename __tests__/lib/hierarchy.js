@@ -184,3 +184,19 @@ test('hierarchy - object prototype member names', function () {
     'otherMethod'
   ]);
 });
+
+test('hierarchy - member namespace defaults to static', function() {
+  const comments = evaluate(function() {
+    /**
+     * @namespace fooNamespace
+     */
+    /**
+     * @class BarClass
+     * @memberof fooNamespace
+     */
+  });
+
+  expect(comments[0].members.static[0].namespace).toEqual(
+    'fooNamespace.BarClass'
+  );
+});

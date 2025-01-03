@@ -39,6 +39,8 @@ function pick(comment) {
 
   if (comment.scope) {
     item.scope = comment.scope;
+  } else if (comment.memberof) {
+    item.scope = 'static';
   }
 
   return item;

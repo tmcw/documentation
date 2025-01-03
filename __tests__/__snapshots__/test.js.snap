@@ -19269,7 +19269,7 @@ Array [
             "static": Array [],
           },
           "name": "getFoo",
-          "namespace": "MyClass#getFoo",
+          "namespace": ".MyClass#getFoo",
           "params": Array [
             Object {
               "description": Object {
@@ -19299,6 +19299,7 @@ Array [
             Object {
               "kind": "class",
               "name": "MyClass",
+              "scope": "static",
             },
             Object {
               "kind": "function",
@@ -19414,12 +19415,13 @@ Array [
             "static": Array [],
           },
           "name": "getUndefined",
-          "namespace": "MyClass.getUndefined",
+          "namespace": ".MyClass.getUndefined",
           "params": Array [],
           "path": Array [
             Object {
               "kind": "class",
               "name": "MyClass",
+              "scope": "static",
             },
             Object {
               "kind": "function",
@@ -19469,12 +19471,13 @@ Array [
       ],
     },
     "name": "MyClass",
-    "namespace": "MyClass",
+    "namespace": ".MyClass",
     "params": Array [],
     "path": Array [
       Object {
         "kind": "class",
         "name": "MyClass",
+        "scope": "static",
       },
     ],
     "properties": Array [],
