@@ -317,7 +317,16 @@ function buildMarkdownAST(comments, config) {
         .filter(Boolean);
     }
 
-    return [u('heading', { depth }, [u('text', comment.name || '')])]
+    return [
+      u(
+        'heading',
+        { depth },
+        (comment.kind
+          ? [u('emphasis', [u('text', comment.kind)]), u('text', ' ')]
+          : []
+        ).concat([u('text', comment.name || '')])
+      )
+    ]
       .concat(githubLink(comment))
       .concat(augmentsLink(comment))
       .concat(seeLink(comment))
