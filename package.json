@@ -55,7 +55,7 @@
     "chdir": "0.0.0",
     "cz-conventional-changelog": "3.3.0",
     "documentation-schema": "0.0.1",
-    "eslint": "^8.21.0",
+    "eslint": "^9.18.0",
     "eslint-config-prettier": "^8.5.0",
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
